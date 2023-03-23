@@ -1,5 +1,7 @@
 # homebrew-teclada
 
+(This is experimental)
+
 This repositories contains a Homebrew cask for installing Teclada on Mac.
 
 To install Teclada using Homebrew:
