@@ -1,11 +1,11 @@
-# Teclada Teclada
+# homebrew-teclada
 
-## How do I install these formulae?
+This repositories contains a Homebrew cask for installing Teclada on Mac.
 
-`brew install teclada/teclada/<formula>`
+To install Teclada using Homebrew:
+```
+brew install teclada/teclada/teclada
+teclada_setup setup
+```
 
-Or `brew tap teclada/teclada` and then `brew install <formula>`.
-
-## Documentation
-
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+For full documentation, see [the wiki](https://github.com/Teclada/teclada/wiki).
