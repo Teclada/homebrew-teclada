@@ -22,11 +22,11 @@ cask "teclada" do
     # Record that this was a homebrew installation
     installer script: {
         executable: "/bin/bash",
-        args:       ["-c", "echo 'brew' > '#{staged_path}/usr/local/bin/teclada_installation_method'"],
+        args:       ["-c", "printf 'brew' > '#{staged_path}/usr/local/bin/teclada_installation_method'"],
     }
     installer script: {
         executable: "/bin/bash",
-        args:       ["-c", "echo '#{HOMEBREW_PREFIX}/' > '#{staged_path}/usr/local/bin/teclada.runfiles/host/install/homebrew_prefix'"],
+        args:       ["-c", "printf '#{HOMEBREW_PREFIX}/' > '#{staged_path}/usr/local/bin/teclada.runfiles/host/install/homebrew_prefix'"],
     }
 
     # Make Apple super mad :)
