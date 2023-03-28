@@ -14,6 +14,7 @@ cask "teclada" do
     homepage "https://www.teclada.com/"
 
     depends_on formula: "bash"
+    depends_on formula: "teclada_base_formula"
 
     binary "usr/local/bin/teclada"
     binary "usr/local/bin/teclada_setup"
