@@ -1,5 +1,5 @@
 cask "teclada" do
-    version "0.0.31"
+    version "0.0.30"
 
     if Hardware::CPU.arm?
         sha256 "ccd1325b145732ab73d00d11329631d74bd3b16aeb0ffdffbf15af318e033337"        
