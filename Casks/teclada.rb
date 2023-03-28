@@ -19,6 +19,16 @@ cask "teclada" do
     binary "usr/local/bin/teclada"
     binary "usr/local/bin/teclada_setup"
 
+    # Record that this was a homebrew installation
+    installer script: {
+        executable: "/bin/bash",
+        args:       ["-c", "echo 'brew' > '#{staged_path}/usr/local/bin/teclada_installation_method'"],
+    }
+    installer script: {
+        executable: "/bin/bash",
+        args:       ["-c", "echo '#{HOMEBREW_PREFIX}/bin' > '#{staged_path}/usr/local/bin/teclada.runfiles/host/install/homebrew_prefix'"],
+    }
+
     # Make Apple super mad :)
     installer script: {
         executable: "/bin/bash",
