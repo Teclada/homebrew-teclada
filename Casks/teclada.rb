@@ -26,7 +26,7 @@ cask "teclada" do
     }
     installer script: {
         executable: "/bin/bash",
-        args:       ["-c", "echo '#{HOMEBREW_PREFIX}/bin' > '#{staged_path}/usr/local/bin/teclada.runfiles/host/install/homebrew_prefix'"],
+        args:       ["-c", "echo '#{HOMEBREW_PREFIX}/' > '#{staged_path}/usr/local/bin/teclada.runfiles/host/install/homebrew_prefix'"],
     }
 
     # Make Apple super mad :)
