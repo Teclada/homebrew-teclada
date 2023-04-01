@@ -1,5 +1,5 @@
 cask "teclada" do
-    version "0.0.31"
+    version "0.0.32"
 
     if Hardware::CPU.arm?  
         url "https://github.com/Teclada/teclada/releases/download/#{version}/teclada_mac_arm64.tar.gz"
