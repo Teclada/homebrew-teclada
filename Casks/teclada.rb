@@ -1,12 +1,12 @@
 cask "teclada" do
-    version "0.0.32"
+    version "0.0.33"
 
     if Hardware::CPU.arm?  
         url "https://github.com/Teclada/teclada/releases/download/#{version}/teclada_mac_arm64.tar.gz"
-        sha256 "aceb9d75d5ead6e2734eb353a0f1ae34b1f319d781bc7476bd1b429ffa3a5a8d"      
+        sha256 "d8ffdf600250b64799c5835262a12dcb16f663b0e1a965746c2135c854baf703"
     elsif Hardware::CPU.intel?
         url "https://github.com/Teclada/teclada/releases/download/#{version}/teclada_mac_x86_64.tar.gz"
-        sha256 "8a28a941267cf8a1eb542b28ee40986722c9173e56b93c0469b24937d073095f"
+        sha256 "61e7ff5dd4360285411cdba58f664160478720b79d649a38d3ce092270a0430e"
     end
         
     name "Teclada"
