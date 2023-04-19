@@ -22,21 +22,21 @@ cask "teclada" do
     # Record that this was a homebrew installation
     installer script: {
         executable: "/bin/bash",
-        args:       ["-c", "printf 'brew' > '#{staged_path}/usr/local/bin/teclada_installation_method'"],
+        args:       ["-c", "(printf 'brew' > '#{staged_path}/usr/local/bin/teclada_installation_method') || true"],
     }
     installer script: {
         executable: "/bin/bash",
-        args:       ["-c", "printf '#{HOMEBREW_PREFIX}/' > '#{staged_path}/usr/local/bin/teclada.runfiles/host/install/homebrew_prefix'"],
+        args:       ["-c", "(printf '#{HOMEBREW_PREFIX}/' > '#{staged_path}/usr/local/bin/teclada.runfiles/host/install/homebrew_prefix') || true"],
     }
 
     # Make Apple super mad :)
     installer script: {
         executable: "/bin/bash",
-        args:       ["-c", "xattr -r -d com.apple.metadata:kMDItemWhereFroms '#{staged_path}'"],
+        args:       ["-c", "(xattr -r -d com.apple.metadata:kMDItemWhereFroms '#{staged_path}') || true"],
     }
     installer script: {
         executable: "/bin/bash",
-        args:       ["-c", "xattr -r -d com.apple.quarantine '#{staged_path}'"],
+        args:       ["-c", "(xattr -r -d com.apple.quarantine '#{staged_path}') || true"],
     }
 
   end
